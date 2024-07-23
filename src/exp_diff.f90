@@ -19,7 +19,7 @@ subroutine exp_diff
   call diff(qqn,dqq)
   
   do i = 1+margin,nxg-margin
-     qqm(i) = 0.5d0*qq(i) + 0.5d0*(qqn(i) + dqq(i))
+     qqm(i) = 0.5d0*qq(i) + 0.5d0*(dqq(i) + qqn(i))
   enddo
 
   call bc(qqm)
